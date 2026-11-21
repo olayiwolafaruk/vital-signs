@@ -1,4 +1,2 @@
-/* Public settings only. Use approved, HTTPS, frame-compatible placements.
-   Site-wide overlay scripts are deliberately not supported. */
-window.vitalAds={bannerUrl:'',nativeUrl:'',inPageUrl:'',sponsor:null};
-// Sponsor example: {name:'Business name',message:'Approved sponsor copy',url:'https://your-sponsor.example/'}
+// Public publisher settings. Change socialBar to false to disable Social Bar on the homepage and articles.
+window.vitalAds={host:'vitalshealth.pages.dev',socialBar:true,nativeId:'36c7e2c6fb1ac83c368f49a8de8f80a7',socialSrc:'https://bauval.org/14/cb3f414247de750f712b026b1aff8118'};
