@@ -1,4 +1,7 @@
 (()=>{
+ const url=new URL(location.href),mode=url.searchParams.get('testphone'),key='vs:no-ad-requests';let off=false;
+ try{if(mode==='on')localStorage.setItem(key,'1');if(mode==='off')localStorage.removeItem(key);off=localStorage.getItem(key)==='1';}catch{if(mode==='on'){alert('Storage is unavailable. Ads are off for this page only.');return;}}
+ if(off){const badge=document.createElement('small');badge.textContent='Test browser · ads off';badge.style.cssText='display:block;text-align:center;padding:6px;font:12px system-ui;color:#555';document.body.prepend(badge);return;}
  const c=window.vitalAds;if(!c)return;
  const demo=new URLSearchParams(location.search).get('adpreview')==='1';if(!demo&&location.hostname!==c.host)return;
  const el=t=>document.createElement(t),q=s=>document.querySelector(s),asset=new URL('.',document.currentScript.src);
